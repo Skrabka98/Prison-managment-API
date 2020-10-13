@@ -92,3 +92,13 @@ C:\Users\barti\source\repos\Projekt\Projekt\bin\Debug\netcoreapp3.1\zh-Hant\Micr
 C:\Users\barti\source\repos\Projekt\Projekt\obj\Debug\netcoreapp3.1\Projekt.csproj.CoreCompileInputs.cache
 C:\Users\barti\source\repos\Projekt\Projekt\obj\Debug\netcoreapp3.1\Projekt.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\barti\source\repos\Projekt\Projekt\obj\Debug\netcoreapp3.1\Projekt.csproj.CopyComplete
+C:\Users\barti\source\repos\Projekt\Projekt\bin\Debug\netcoreapp3.1\Projekt.Views.dll
+C:\Users\barti\source\repos\Projekt\Projekt\bin\Debug\netcoreapp3.1\Projekt.Views.pdb
+C:\Users\barti\source\repos\Projekt\Projekt\obj\Debug\netcoreapp3.1\Projekt.RazorAssemblyInfo.cache
+C:\Users\barti\source\repos\Projekt\Projekt\obj\Debug\netcoreapp3.1\Projekt.RazorAssemblyInfo.cs
+C:\Users\barti\source\repos\Projekt\Projekt\obj\Debug\netcoreapp3.1\Projekt.TagHelpers.input.cache
+C:\Users\barti\source\repos\Projekt\Projekt\obj\Debug\netcoreapp3.1\Projekt.TagHelpers.output.cache
+C:\Users\barti\source\repos\Projekt\Projekt\obj\Debug\netcoreapp3.1\Projekt.RazorCoreGenerate.cache
+C:\Users\barti\source\repos\Projekt\Projekt\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\barti\source\repos\Projekt\Projekt\obj\Debug\netcoreapp3.1\Projekt.RazorTargetAssemblyInfo.cs
+C:\Users\barti\source\repos\Projekt\Projekt\obj\Debug\netcoreapp3.1\Projekt.Views.pdb
