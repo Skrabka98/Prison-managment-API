@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace PrisonBack.Domain.Models
 {
@@ -10,8 +13,6 @@ namespace PrisonBack.Domain.Models
         [Key]
         public int Id { get; set; }
         public string PrisonName { get; set; }
-        public virtual ICollection<Cell> Cells { get; set; }
-        public virtual ICollection<Prisoner> Prisoner { get; set; }
 
     }
 }

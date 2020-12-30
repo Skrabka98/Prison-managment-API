@@ -13,14 +13,10 @@ namespace PrisonBack.Domain.Models
     {
         [Key]
         public int Id { get; set; }
-
-        public int IdUser { get; set; }
-        public int IdPermission { get; set; }
-
-        [ForeignKey("IdUser")]
-        public virtual User User { get; set; }
-        [ForeignKey("IdPermission")]
-        public virtual Permission Permission { get; set; }
+        public string UserName { get; set; }
+        public int IdPrison { get; set; }
+        [ForeignKey("IdPrison")]
+        public virtual Prison Prison { get; set; }
 
     }
 }

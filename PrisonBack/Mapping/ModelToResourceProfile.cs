@@ -3,6 +3,7 @@ using PrisonBack.Resources.DTOs;
 using AutoMapper;
 using PrisonBack.Resources.ViewModels;
 using PrisonBack.Resources;
+using Microsoft.AspNetCore.Identity;
 
 namespace PrisonBack.Mapping
 {
@@ -18,6 +19,8 @@ namespace PrisonBack.Mapping
             CreateMap<PrisonerDTO, Prisoner>();
             CreateMap<Pass, PassVM>();
             CreateMap<PassDTO, Pass>();
+            CreateMap<Isolation, IsolationVM>();
+            CreateMap<IsolationDTO, Isolation>();
 
 
         }

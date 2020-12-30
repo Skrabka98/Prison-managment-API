@@ -21,6 +21,7 @@ namespace PrisonBack.Domain.Models
         public bool Isolated { get; set; }
         public int IdCell { get; set; }
 
+
         [ForeignKey("IdCell")]
         public virtual Cell Cell { get; set; }
         public virtual ICollection<Isolation> Isolations { get; set; }

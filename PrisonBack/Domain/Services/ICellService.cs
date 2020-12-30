@@ -9,11 +9,12 @@ namespace PrisonBack.Domain.Services
     public interface ICellService
     {
         Cell SelectedCell(int id);
-        Task<IEnumerable<Cell>> AllCell(int id);
+        Task<IEnumerable<Cell>> AllCell(string userName);
         void CreateCell(Cell cell);
         bool SaveChanges();
         void DeleteCell(Cell cell);
         void UpdateCell(Cell cell);
+        int PrisonID(string userName);
 
     }
 }
