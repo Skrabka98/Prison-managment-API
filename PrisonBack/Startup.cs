@@ -99,12 +99,6 @@ namespace PrisonBack
             services.AddScoped<IAddUserService, AddUserService>();
             services.AddScoped<IAddUserRepository, AddUserRepository>();
 
-            services.AddScoped<ICellTypeService, CellTypeService>();
-            services.AddScoped<ICellTypeRepository, CellTypeRepository>();
-
-            services.AddScoped<IUserInfoService, UserInfoService>();
-            services.AddScoped<IUserInfoRepository, UserInfoRepository>();
-
             services.AddScoped<INotificationRepository, NotificationRepository>();
 
             services.AddTransient<IMailService, MailService>();
