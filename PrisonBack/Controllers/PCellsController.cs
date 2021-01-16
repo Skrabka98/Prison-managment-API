@@ -48,6 +48,7 @@ namespace PrisonBack.Controllers
 
             var cellModel = _mapper.Map<Cell>(cellDTO);
             cellModel.IdPrison = _cellService.PrisonID(userName);
+
             if ((cellModel.Id == null)&&(cellModel.IdCellType == 0))
             {
                 return NotFound();
