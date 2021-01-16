@@ -6785,11 +6785,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ppo\\39607\\PrisonBack\\PrisonBack\\PrisonBack\\PrisonBack.csproj",
+      "projectUniqueName": "C:\\ppo\\39607\\PrisonBack\\PrisonBack\\PrisonBack.csproj",
       "projectName": "PrisonBack",
-      "projectPath": "C:\\ppo\\39607\\PrisonBack\\PrisonBack\\PrisonBack\\PrisonBack.csproj",
+      "projectPath": "C:\\ppo\\39607\\PrisonBack\\PrisonBack\\PrisonBack.csproj",
       "packagesPath": "C:\\Users\\barti\\.nuget\\packages\\",
-      "outputPath": "C:\\ppo\\39607\\PrisonBack\\PrisonBack\\PrisonBack\\obj\\",
+      "outputPath": "C:\\ppo\\39607\\PrisonBack\\PrisonBack\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\barti\\AppData\\Roaming\\NuGet\\NuGet.Config",
