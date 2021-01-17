@@ -35,7 +35,7 @@ namespace PrisonBack.Controllers
         }
         [HttpGet]
 
-        public ActionResult<List<Cell>> AllCell()
+        public ActionResult<Cell> AllCell()
         {
             string userName = User.Identity.Name;
             var cell =  _cellService.AllCell(userName);
