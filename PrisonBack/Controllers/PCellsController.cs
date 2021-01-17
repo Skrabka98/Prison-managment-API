@@ -35,11 +35,11 @@ namespace PrisonBack.Controllers
         }
         [HttpGet]
 
-        public List<Cell> AllCell()
+        public ActionResult<List<Cell>> AllCell()
         {
             string userName = User.Identity.Name;
             var cell =  _cellService.AllCell(userName);
-            return cell;
+            return Ok(cell);
         }
         [HttpPost]
         public ActionResult<CellVM> AddCell([FromBody] CellDTO cellDTO)
