@@ -35,10 +35,10 @@ namespace PrisonBack.Controllers
         }
         [HttpGet]
 
-        public async Task<IEnumerable<Cell>> AllCell()
+        public List<Cell> AllCell()
         {
             string userName = User.Identity.Name;
-            var cell = await _cellService.AllCell(userName);
+            var cell =  _cellService.AllCell(userName);
             return cell;
         }
         [HttpPost]
