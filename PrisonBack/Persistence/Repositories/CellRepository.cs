@@ -36,6 +36,11 @@ namespace PrisonBack.Persistence.Repositories
                 throw new ArgumentNullException(nameof(cell));
 
             }
+            var cellTypes = _context.CellTypes.FirstOrDefault(x => x.Id == cell.IdCellType);
+            if(cellTypes == null)
+            {
+                throw new ArgumentNullException(nameof(cell));
+            }
             _context.Cells.Add(cell);
         }
         public void DeleteCell(Cell cell)
