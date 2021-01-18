@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace PrisonBack.Controllers
 {
     [Route("/api/[controller]")]
-   // [Authorize]
+    [Authorize]
 
     public class PCellsController : Controller
     {
@@ -38,7 +38,7 @@ namespace PrisonBack.Controllers
 
         public ActionResult<Cell> AllCell()
         {
-            string userName = User.Identity.Name;
+            string userName =  User.Identity.Name;
             try
             {
                 
