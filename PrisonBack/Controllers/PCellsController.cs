@@ -43,7 +43,7 @@ namespace PrisonBack.Controllers
             {
                 
                 var cell = _cellService.AllCell(userName);
-                return Ok(cell);
+                return new JsonResult(cell);
             }
             catch(Exception ex)
             {
