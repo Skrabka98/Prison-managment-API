@@ -5,6 +5,7 @@ using PrisonBack.Auth;
 using PrisonBack.Domain.Models;
 using PrisonBack.Domain.Services;
 using PrisonBack.Resources;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -38,8 +39,17 @@ namespace PrisonBack.Controllers
         public ActionResult<Cell> AllCell()
         {
             string userName = User.Identity.Name;
-            var cell =  _cellService.AllCell(userName);
-            return Ok(cell);
+            try
+            {
+                
+                var cell = _cellService.AllCell(userName);
+                return Ok(cell);
+            }
+            catch(Exception ex)
+            {
+                _loggerService.AddLog(controller, ex.Message, userName);
+                return NoContent();
+            }
         }
         [HttpGet("cell")]
 
