@@ -51,7 +51,7 @@ namespace PrisonBack
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,
-                    Description = "Please insert JWT with Bearer into field",
+                    Description = "Prosze podac kod w formacie (bearer KOD)",
                     Name = "Authorization",
                     Type = SecuritySchemeType.ApiKey
                 });
