@@ -6868,19 +6868,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\barti\\.nuget\\packages\\": {}
+    "C:\\Users\\aleks\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\barti\\source\\repos\\Projekt\\test\\PrisonBack\\PrisonBack.csproj",
+      "projectUniqueName": "D:\\test\\PrisonBack\\PrisonBack.csproj",
       "projectName": "PrisonBack",
-      "projectPath": "C:\\Users\\barti\\source\\repos\\Projekt\\test\\PrisonBack\\PrisonBack.csproj",
-      "packagesPath": "C:\\Users\\barti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\barti\\source\\repos\\Projekt\\test\\PrisonBack\\obj\\",
+      "projectPath": "D:\\test\\PrisonBack\\PrisonBack.csproj",
+      "packagesPath": "C:\\Users\\aleks\\.nuget\\packages\\",
+      "outputPath": "D:\\test\\PrisonBack\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\barti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aleks\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6993,7 +6993,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

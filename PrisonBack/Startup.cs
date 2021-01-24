@@ -38,6 +38,10 @@ namespace PrisonBack
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddCors(options => options.AddDefaultPolicy(
+                builder => builder.AllowAnyOrigin()));
+
             services.AddSwaggerGen(options =>
             {
                 options.EnableAnnotations();
@@ -162,6 +166,8 @@ namespace PrisonBack
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthentication();
             app.UseAuthorization();
