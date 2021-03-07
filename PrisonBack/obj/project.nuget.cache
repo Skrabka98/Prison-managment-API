@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "Dy3CK48kM+Kxv1yiwMGjTAJIFCNTqT7KNZ6T5LGMp4clHJsg7GLJ2Y0YeJ0g0dbqEXd92N21bmj7ETWzqyPzZw==",
+=======
+  "dgSpecHash": "pnc26x7Lk6cgPG2qYDtlqize+dVOPixjFP2GzoSXRHUlFTfcnVRQm9R6vQQqADHHgXLltilcB777fR88HNsM3g==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "D:\\test\\PrisonBack\\PrisonBack.csproj",
   "expectedPackageFiles": [

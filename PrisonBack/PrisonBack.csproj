@@ -6,15 +6,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Remove="Migrations\20201122231236_pass.cs" />
-		<Compile Remove="Migrations\20201122231236_pass.Designer.cs" />
-		<Compile Remove="Migrations\20201122231714_pass.cs" />
-		<Compile Remove="Migrations\20201122231714_pass.Designer.cs" />
-		<Compile Remove="Migrations\20201122231821_pass.cs" />
-		<Compile Remove="Migrations\20201122231821_pass.Designer.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="AutoMapper" Version="10.1.1" />
 		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
 		<PackageReference Include="MailKit" Version="2.10.0" />
