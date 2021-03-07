@@ -171,6 +171,10 @@ C:\ppo\39607\PrisonBack\PrisonBack\obj\Debug\netcoreapp3.1\PrisonBack.dll
 C:\ppo\39607\PrisonBack\PrisonBack\obj\Debug\netcoreapp3.1\PrisonBack.pdb
 C:\ppo\39607\PrisonBack\PrisonBack\obj\Debug\netcoreapp3.1\PrisonBack.genruntimeconfig.cache
 C:\Users\barti\source\repos\Projekt\test\PrisonBack\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\barti\source\repos\Projekt\test\PrisonBack\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\barti\source\repos\Projekt\test\PrisonBack\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+C:\Users\barti\source\repos\Projekt\test\PrisonBack\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
+C:\Users\barti\source\repos\Projekt\test\PrisonBack\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\local\mssql1.arm.json
 C:\Users\barti\source\repos\Projekt\test\PrisonBack\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\barti\source\repos\Projekt\test\PrisonBack\bin\Debug\netcoreapp3.1\PrisonBack.exe
 C:\Users\barti\source\repos\Projekt\test\PrisonBack\bin\Debug\netcoreapp3.1\PrisonBack.deps.json
@@ -255,7 +259,6 @@ C:\Users\barti\source\repos\Projekt\test\PrisonBack\bin\Debug\netcoreapp3.1\Micr
 C:\Users\barti\source\repos\Projekt\test\PrisonBack\obj\Debug\netcoreapp3.1\PrisonBack.csproj.CoreCompileInputs.cache
 C:\Users\barti\source\repos\Projekt\test\PrisonBack\obj\Debug\netcoreapp3.1\PrisonBack.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\barti\source\repos\Projekt\test\PrisonBack\obj\Debug\netcoreapp3.1\PrisonBack.MvcApplicationPartsAssemblyInfo.cache
-<<<<<<< Updated upstream
 D:\test\PrisonBack\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\test\PrisonBack\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\test\PrisonBack\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
@@ -345,6 +348,3 @@ D:\test\PrisonBack\obj\Debug\netcoreapp3.1\staticwebassets\PrisonBack.StaticWebA
 D:\test\PrisonBack\obj\Debug\netcoreapp3.1\PrisonBack.dll
 D:\test\PrisonBack\obj\Debug\netcoreapp3.1\PrisonBack.pdb
 D:\test\PrisonBack\obj\Debug\netcoreapp3.1\PrisonBack.genruntimeconfig.cache
-=======
-C:\Users\barti\source\repos\Projekt\test\PrisonBack\obj\Debug\netcoreapp3.1\scopedcss\bundle\PrisonBack.styles.css
->>>>>>> Stashed changes

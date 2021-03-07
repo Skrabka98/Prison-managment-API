@@ -3,11 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PrisonBack.Migrations
 {
-<<<<<<< Updated upstream:PrisonBack/Migrations/20210124123710_xxx.cs
     public partial class xxx : Migration
-=======
-    public partial class initial : Migration
->>>>>>> Stashed changes:PrisonBack/Migrations/20210307175534_initial.cs
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

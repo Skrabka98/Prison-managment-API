@@ -10,13 +10,8 @@ using PrisonBack.Persistence.Context;
 namespace PrisonBack.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-<<<<<<< Updated upstream:PrisonBack/Migrations/20210124123710_xxx.Designer.cs
     [Migration("20210124123710_xxx")]
     partial class xxx
-=======
-    [Migration("20210307175534_initial")]
-    partial class initial
->>>>>>> Stashed changes:PrisonBack/Migrations/20210307175534_initial.Designer.cs
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
