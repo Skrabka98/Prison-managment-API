@@ -10,8 +10,8 @@ using PrisonBack.Persistence.Context;
 namespace PrisonBack.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210124123710_xxx")]
-    partial class xxx
+    [Migration("20201213222726_edit_invCode")]
+    partial class edit_invCode
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

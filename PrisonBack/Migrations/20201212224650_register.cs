@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PrisonBack.Migrations
 {
-    public partial class xxx : Migration
+    public partial class register : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,8 +26,6 @@ namespace PrisonBack.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Forname = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -85,6 +83,18 @@ namespace PrisonBack.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Reason", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserPermission",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserPermission", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -221,27 +231,6 @@ namespace PrisonBack.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "InviteCodes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Code = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Status = table.Column<bool>(type: "bit", nullable: false),
-                    IdPrison = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_InviteCodes", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_InviteCodes_Prison_IdPrison",
-                        column: x => x.IdPrison,
-                        principalTable: "Prison",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Logger",
                 columns: table => new
                 {
@@ -264,26 +253,6 @@ namespace PrisonBack.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserPermission",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdPrison = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_UserPermission", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_UserPermission_Prison_IdPrison",
-                        column: x => x.IdPrison,
-                        principalTable: "Prison",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Prisoner",
                 columns: table => new
                 {
@@ -296,7 +265,8 @@ namespace PrisonBack.Migrations
                     Pass = table.Column<bool>(type: "bit", nullable: false),
                     Behavior = table.Column<int>(type: "int", nullable: false),
                     Isolated = table.Column<bool>(type: "bit", nullable: false),
-                    IdCell = table.Column<int>(type: "int", nullable: false)
+                    IdCell = table.Column<int>(type: "int", nullable: false),
+                    PrisonId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -307,6 +277,12 @@ namespace PrisonBack.Migrations
                         principalTable: "Cell",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Prisoner_Prison_PrisonId",
+                        column: x => x.PrisonId,
+                        principalTable: "Prison",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -430,11 +406,6 @@ namespace PrisonBack.Migrations
                 column: "IdPrison");
 
             migrationBuilder.CreateIndex(
-                name: "IX_InviteCodes_IdPrison",
-                table: "InviteCodes",
-                column: "IdPrison");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Isolation_IdPrisoner",
                 table: "Isolation",
                 column: "IdPrisoner");
@@ -455,6 +426,11 @@ namespace PrisonBack.Migrations
                 column: "IdCell");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Prisoner_PrisonId",
+                table: "Prisoner",
+                column: "PrisonId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Punishment_IdPrisoner",
                 table: "Punishment",
                 column: "IdPrisoner");
@@ -463,11 +439,6 @@ namespace PrisonBack.Migrations
                 name: "IX_Punishment_IdReason",
                 table: "Punishment",
                 column: "IdReason");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_UserPermission_IdPrison",
-                table: "UserPermission",
-                column: "IdPrison");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -486,9 +457,6 @@ namespace PrisonBack.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
-
-            migrationBuilder.DropTable(
-                name: "InviteCodes");
 
             migrationBuilder.DropTable(
                 name: "Isolation");

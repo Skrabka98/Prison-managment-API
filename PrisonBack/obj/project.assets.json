@@ -6873,11 +6873,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\barti\\source\\repos\\Projekt\\test\\PrisonBack\\PrisonBack.csproj",
+      "projectUniqueName": "C:\\ppo\\39607\\API\\PrisonBack\\PrisonBack.csproj",
       "projectName": "PrisonBack",
-      "projectPath": "C:\\Users\\barti\\source\\repos\\Projekt\\test\\PrisonBack\\PrisonBack.csproj",
+      "projectPath": "C:\\ppo\\39607\\API\\PrisonBack\\PrisonBack.csproj",
       "packagesPath": "C:\\Users\\barti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\barti\\source\\repos\\Projekt\\test\\PrisonBack\\obj\\",
+      "outputPath": "C:\\ppo\\39607\\API\\PrisonBack\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\barti\\AppData\\Roaming\\NuGet\\NuGet.Config",
