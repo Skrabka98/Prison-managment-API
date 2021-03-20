@@ -97,6 +97,9 @@ namespace PrisonBack
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
                 };
             });
+
+            services.AddCors();
+
             services.AddScoped<ICellService, CellService>();
             services.AddScoped<ICellRepository, CellRepository>();
 
@@ -163,7 +166,11 @@ namespace PrisonBack
 
             app.UseRouting();
 
-            app.UseCors();
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials());
 
             app.UseAuthentication();
             app.UseAuthorization();
