@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -29,15 +30,15 @@ namespace PrisonBack.Controllers
         private readonly IConfiguration _configuration;
         private readonly IInviteCodeService _inviteCodeService;
         private readonly IAddUserService _addUserService;
-        private readonly INotificationMail _notificationService;
-        public AuthenticationController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration, IInviteCodeService inviteCodeService, IAddUserService addUserService, INotificationMail notificationService)
+        private readonly IPrisonService _prisonService;
+        public AuthenticationController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration, IInviteCodeService inviteCodeService, IAddUserService addUserService, IPrisonService prisonService)
         {
             _configuration = configuration;
             _roleManager = roleManager;
             _userManager = userManager;
             _inviteCodeService = inviteCodeService;
             _addUserService = addUserService;
-            _notificationService = notificationService;
+            _prisonService = prisonService;
         }
         [HttpPost]
         [Route("login")]
@@ -116,7 +117,7 @@ namespace PrisonBack.Controllers
    
         [HttpPost]
         [Route("register-admin")]
-        public async Task<IActionResult> RegisterAdmin([FromBody] RegisterModel model)
+        public async Task<IActionResult> RegisterAdmin([FromBody] RegisterAdminModel model)
         {
             var userExists = await _userManager.FindByNameAsync(model.UserName);
             if (userExists != null)
@@ -143,7 +144,9 @@ namespace PrisonBack.Controllers
             {
                 await _userManager.AddToRoleAsync(user, UserRoles.Admin);
             }
-
+            Prison prison = new Prison();
+            prison.PrisonName = model.PrisonName;
+            _prisonService.CreatePrison(prison);
             return Ok(new Response { Status = "Success", Message = "Użytkownik został stworzony!" });
         }
 
