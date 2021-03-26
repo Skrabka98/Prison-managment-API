@@ -63,7 +63,7 @@ namespace PrisonBack.Controllers
 
             _loggerService.AddLog(controller, "Dodano przepustkę więźnia", userName);
 
-            return Ok();
+            return Ok(StatusCode(200));
         }
 
         [HttpDelete("{id}")]
@@ -83,11 +83,11 @@ namespace PrisonBack.Controllers
             _passService.SaveChanges();
             _loggerService.AddLog(controller, "Usunięto przepustkę więźnia", userName);
 
-            return Ok();
+            return Ok(StatusCode(200));
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdatePass(int id, [FromBody] PassDTO passDTO)
+        public ActionResult UpdatePass(int id, [FromBody] EditPassDTO passDTO)
         {
             string userName = User.Identity.Name;
             var pass = _passService.SelectedPass(id);
@@ -95,13 +95,13 @@ namespace PrisonBack.Controllers
             {
                 return NotFound();
             }
-            _mapper.Map(passDTO, pass);
+            pass.EndDate = passDTO.EndDate;
             _passService.UpdatePass(pass);
             _passService.SaveChanges();
             _loggerService.AddLog(controller, "Edytowano przepustkę więźnia", userName);
 
 
-            return Ok();
+            return Ok(StatusCode(200));
         }
 
        
