@@ -74,20 +74,21 @@ namespace PrisonBack.Controllers
                         claims: authClaims,
                         signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
                         );
+                    string roles = userRoles[0];
 
                     return Ok(new
                     {
                         token = new JwtSecurityTokenHandler().WriteToken(token),
                         expiration = token.ValidTo,
-                        userRoles
+                        roles
                     });
                 }
                 return Unauthorized();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 var exception = e.Message;
-                return Ok(exception);
+                return NotFound(exception);
             }
         }
   
