@@ -74,7 +74,7 @@ namespace PrisonBack.Controllers
                         claims: authClaims,
                         signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
                         );
-                    string roles = userRoles[0];
+                    string roles = userRoles.Count!= 0 ? userRoles[0]: "User";
 
                     return Ok(new
                     {
