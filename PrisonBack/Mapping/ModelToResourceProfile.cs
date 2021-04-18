@@ -21,7 +21,7 @@ namespace PrisonBack.Mapping
             CreateMap<PassDTO, Pass>();
             CreateMap<Isolation, IsolationVM>();
             CreateMap<IsolationDTO, Isolation>();
-
+            CreateMap<Reason, ReasonVM>();
 
         }
     }

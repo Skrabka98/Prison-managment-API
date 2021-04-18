@@ -20,5 +20,10 @@ namespace PrisonBack.Services
         {
             return await _reasonRepository.AllReasons();
         }
+
+        public Reason SelectedReason(int id)
+        {
+            return _reasonRepository.SelectedReason(id);
+        }
     }
 }

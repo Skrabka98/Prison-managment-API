@@ -9,5 +9,7 @@ namespace PrisonBack.Domain.Services
     public interface IReasonService
     {
         Task<IEnumerable<Reason>> AllReasons();
+        Reason SelectedReason(int id);
+
     }
 }

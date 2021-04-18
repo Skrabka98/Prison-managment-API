@@ -9,6 +9,6 @@ namespace PrisonBack.Domain.Repositories
     public interface IReasonRepository
     {
         Task<IEnumerable<Reason>> AllReasons();
-
+        Reason SelectedReason(int id);
     }
 }

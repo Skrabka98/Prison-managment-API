@@ -22,5 +22,10 @@ namespace PrisonBack.Persistence.Repositories
             var reason = _context.Reasons.ToListAsync();
             return await reason;
         }
+
+        public Reason SelectedReason(int id)
+        {
+            return _context.Reasons.FirstOrDefault(r => r.Id == id);
+        }
     }
 }

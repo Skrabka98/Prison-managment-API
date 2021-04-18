@@ -6,6 +6,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Auth\FacebookAuth\**" />
+	  <Content Remove="Auth\FacebookAuth\**" />
+	  <EmbeddedResource Remove="Auth\FacebookAuth\**" />
+	  <None Remove="Auth\FacebookAuth\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Compile Remove="Migrations\20201122231236_pass.cs" />
 		<Compile Remove="Migrations\20201122231236_pass.Designer.cs" />
 		<Compile Remove="Migrations\20201122231714_pass.cs" />
@@ -35,10 +42,6 @@
 		<PackageReference Include="MimeKit" Version="2.10.1" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
 		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Auth\FacebookAuth\" />
 	</ItemGroup>
 
 	<ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
